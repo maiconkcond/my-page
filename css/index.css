@@ -1,0 +1,130 @@
+body{
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content-main{
+     background: url(../img/teste2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;    
+}
+
+.call-to-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh
+}
+
+.call-to-action h1 {
+    font-size: 2.2em;
+    transform: rotate(-3deg) skew(-6deg);
+    color: #000;
+    background-color: #fff;
+    padding: 0.6em;
+    text-align: center;
+    font-weight: 900;
+    box-shadow: 5px 5px #000;
+    margin-bottom: .6em;
+}
+
+.call-to-action h3 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 2em;
+}
+
+.btn-download-cv{
+    text-decoration: none;
+    padding: .6em;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    background-color: #7b348b;
+    border: .2em solid #7b348b;
+    border-radius: 1em;
+    -webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+}
+.btn-download-cv:hover{
+    box-shadow:
+        1px 1px #4d225e,
+        2px 2px #4d225e,
+        3px 3px #4d225e;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+
+
+.menu{
+    display: flex;
+   justify-content: space-between;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.menu ul li {
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-left: 1em;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: .4em;
+}
+
+.menu ul li a:hover{
+    color: #d4d800;
+    border-bottom: .1em solid #d4d800;
+}
+.menu .active{
+    color: #d4d800;
+}
+
+
+.bounce {    
+  position: absolute;
+  height: 3em;
+  -webkit-animation:bounce 1s infinite;
+  animation: bounce 1s infinite;
+}
+
+.bounce:before{
+  bottom: 4em;
+  content: '';
+  position: absolute;
+  left: -1.5em;
+  width: 2em;
+  height: 2em;
+  border-top: solid 3px #d4d800;;
+  border-right: solid 3px #d4d800;;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+@-webkit-keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:15px; }
+  50%      { bottom:20px; }
+  100%     {bottom:0;}
+}
