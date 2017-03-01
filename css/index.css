@@ -43,6 +43,7 @@ body{
     font-size: 2em;
     color: #fff;
     margin-bottom: 2em;
+    text-align: center;
 }
 
 .btn-download-cv{
@@ -66,8 +67,6 @@ body{
     -webkit-transform: translateX(-3px);
     transform: translateX(-3px);
 }
-
-
 
 .menu{
     display: flex;
