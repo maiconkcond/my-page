@@ -96,7 +96,7 @@ body{
 
 
 .call-to-action h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   transform: rotate(-3deg) skew(-6deg);
   color: $cor-preta;
   background-color: #fff;
@@ -108,7 +108,7 @@ body{
 }
 
 .call-to-action h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: $cor-branca;
   font-weight: normal;
   text-align: center;
@@ -230,8 +230,9 @@ body{
       display: flex;
       height: 80%;
       align-items: center;
-      justify-content: center;
+      justify-content: center;;
     }
+
 
     .call-to-action .container{
       display: flex;

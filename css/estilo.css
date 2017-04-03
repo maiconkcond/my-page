@@ -66,7 +66,7 @@ body {
   text-transform: lowercase; }
 
 .call-to-action h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   transform: rotate(-3deg) skew(-6deg);
   color: #000;
   background-color: #fff;
@@ -77,7 +77,7 @@ body {
   margin-bottom: .6em; }
 
 .call-to-action h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #fff;
   font-weight: normal;
   text-align: center; }
