@@ -7,32 +7,69 @@ $color-primary-4: #063C6D;
 
 $cor-branca: #fff;
 $cor-preta: #000;
-$gradient-logo: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+$gradient-logo: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
 
 @mixin mylogo {
-  font-weight: normal;
+  font-weight: bold;
   background-image: $gradient-logo;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Monoton', cursive;
 }
 
-body{
-  font-size: 1.2em;
-  font-family: 'Montserrat', sans-serif;
+html {font-size: 1em;}
+
+body {
+  background-color: white;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
   margin: 0;
-
 }
 
-.content-main{
- background: url(../img/fancy-pants.jpg) repeat center center fixed;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
- height: 100vh;
- width: 100vw;
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
 }
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+.content-main {
+  /* position: absolute; */
+  top: 0; bottom: 0; left: 0; right: 0;
+  height: 100%;
+  }
+
+.content-main:before{
+    content: "";
+        position: absolute;
+        height: 100%; width: 100%;
+         background: url(../img/background.jpg) no-repeat 100% 85% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+        z-index: -1; /* Keep the background behind the content */
+        
+        /* don't forget to use the prefixes you need */
+         -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  }
 
 .content-main section{
   height: 100vh;
@@ -45,7 +82,7 @@ body{
 }
 
 .logo h1{
-  font-size: 2em;
+  font-size: 2.5em;
   @include mylogo;
   margin: 0px;
 }
@@ -85,6 +122,15 @@ body{
   text-indent: 0;
 }
 
+
+.social-icons a img {
+  width: 70px;
+  height: 70px;
+}
+.gitlab {
+      width: 50px ;
+  height: 50px;
+  }
 .menu ul {
   font-size: 1.1em;
 }
@@ -93,8 +139,42 @@ body{
   text-transform: lowercase;
 }
 
+.about {
+  margin-bottom: 4em;
+}
+
+.projects{
+  background: #8d6bbc;
+  position: relative;
+}
 
 
+.projects:before{
+        content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    height: 0;
+    width: 0;
+    border-color: transparent transparent #8d6bbc;
+    border-style: solid;
+    border-width: 0 0 6vw 100vw;
+}
+
+.projects:after{
+           content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 0;
+    width: 0;
+    border-color: transparent transparent #8d6bbc;
+    border-style: solid;
+    border-width: 0 0 6vw 100vw;
+    transform: rotate(180deg);
+}
+
+/*
 .call-to-action h2 {
   font-size: 1.3em;
   transform: rotate(-3deg) skew(-6deg);
@@ -112,7 +192,7 @@ body{
   color: $cor-branca;
   font-weight: normal;
   text-align: center;
-}
+}*/
 
 .btn-download-cv{
   text-decoration: none;
@@ -147,6 +227,15 @@ body{
   height: 3em;
   -webkit-animation:bounce 1s infinite;
   animation: bounce 1s infinite;
+}
+
+footer{
+  background: #452362;
+}
+
+.gitlab{
+  border-radius: 50%;
+  background: #8c4fad;
 }
 
 .bounce:before{
@@ -225,6 +314,8 @@ body{
 
       background: rgba(0, 0, 0, 0.4);
     }
+	
+	
 
     .call-to-action{
       display: flex;
@@ -239,9 +330,9 @@ body{
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-
     }
+	
+
 
     .bounce:before {
       bottom: 0em;
@@ -291,11 +382,88 @@ body{
     align-items: center;
     height: 65%;
   }
+
+    .call-to-action h2 {
+    font-family: 'Archivo Black', sans-serif;
+    background: #7028e4;
+    padding: .2em;
+    color: $cor-branca;
+        font-size: 2em;
+    text-transform: uppercase;
+
+   }
+  
+   .call-to-action h3{
+    font-family: 'Tenor Sans', sans-serif;
+    margin-top: 0;
+    color: #fff;
+  
+  }
   .call-to-action .container{
     display: flex;
     flex-direction: column;
     align-items:center;
   }
+
+  .container-article{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-article img{
+        width: 80px;
+    height: 80x;
+    padding: 1.5em;
+    margin: 1em 0 0 0;
+  }
+
+  .avatar{
+    margin: 2em;
+  }
+
+
+  .avatar img {
+
+    width: 250px;
+    height: 250px;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+}
+
+.about-text{
+  padding: 2em;
+}
+
+.about-text p {
+  text-indent: 2em;
+}
+
+.list-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+.project{
+  width: 20%;
+  height: 200px;
+  background: #535353;
+  margin: 1em;
+}
 
 }
 
