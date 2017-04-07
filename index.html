@@ -30,6 +30,7 @@
   <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
 </head>
 <body>
   <div class="content-main">
@@ -45,12 +46,12 @@
             <nav class="barra-nav">
              <button class="menu-fechar"></button>
              <ul class="menu-principal">
-              <li><a href="" class="active">Inicio</a></li>
-              <li><a href="">Sobre</a></li>
-              <li><a href="">CV</a></li>
-              <li><a href="">Projetos</a></li>
-              <li><a href="">Blog</a></li>
-              <li><a href="">contato</a></li100%>
+              <li><a href="#" class="active">Inicio</a></li>
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="files/Curriculum.pdf" target="_blank">CV</a></li>
+              <li><a href="#projects">Projetos</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contato">contato</a></li100%>
               </ul>
             </nav> 
           </div>
@@ -60,12 +61,12 @@
         <div class="container">
          <h2>Maicon Henrique</h2>
          <h3>Desenvolvedor web e mobile</h3>
-         <a href="#" class="bounce"></a>
+         <a href="#about" class="bounce"></a>
        </div>
      </div>
    </section>
  </div>
- <section>
+ <section id="about">
   <article>
     <div class="about">
       <div class="container">
@@ -92,7 +93,7 @@
     </div>
   </article>
 </section>
-<section>
+<section id="projects">
       <article>
         <div class="projects">
           <div class="container">
@@ -105,10 +106,43 @@
             <a href="#">MOBILE</a>
           </div>
           <div class="list-project">
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
+            <div class="project">
+              <a href="#">
+              <div class="title-project">
+                  <h3>Pizzaria Delivery</h3>
+                </div>
+                <img src="img/projects/project1.jpg" alt="">
+                
+              </a>
+              
+            </div>
+            <div class="project">
+            <a href="#">
+             <div class="title-project">
+                  <h3>Projeto 2</h3>
+                </div>
+              <img src="img/projects/project2.jpg" alt="">
+            </a>
+              
+            </div>
+            <div class="project">
+            <a href="">
+             <div class="title-project">
+                  <h3>Aplicativo 3</h3>
+                </div>
+              <img src="img/projects/project3.jpg" alt="">
+            </a>
+              
+            </div>
+            <div class="project">
+            <a href="">
+             <div class="title-project">
+                  <h3>Projeto 4</h3>
+                </div>
+              <img src="img/projects/project4.jpg" alt="">
+            </a>
+              
+            </div>
           </div>
           <div class="see-more">
             <a href="#">que tal ver outros projetos?</a>
@@ -118,28 +152,60 @@
       </article>
     </section>
 
-    <section>
+    <section id="blog">
       <article>
         <div class="blog">
           <div class="container">
             <div class="header-article">
               <img src="img/icons/compose_page_blog.svg" alt="My Blog">
             </div>
-            <h4>Ultimos posts: </h4>
+            <h4 class="title-post">Ultimos posts: </h4>
             <div class="list-posts">
-              <div class="post"></div>
-              <div class="post"></div>
-              <div class="post"></div>
+              <div class="post">
+                <a href="#">
+                  <span>03 de janeiro 2017</span>
+                <h4>Resolvendo erro plugin Jekyll</h4>
+                <p>Como não perder tempo com erro "tosco" na hora de instalar o plugin do Jekyll no Sublime...</p>
+                <div class="tags">
+                  <div class="tag">jekyll</div>
+                  <div class="tag">sublime</div>
+                </div>
+                </a>
+                
+              </div>
+              <div class="post">
+                <a href="#">
+                  <span>10 de dezembro 2016</span>
+                <h4>CRUD com CodeIgniter[PARTE 2]</h4>
+                <p>Nesso post mostro como criar o 'create' do CRUD, ou seja conseguiremos inserir um registro no banco de dados...</p>
+                <div class="tags">
+                  <div class="tag">php</div>
+                  <div class="tag">codeigniter  </div>
+                </div>
+                </a>
+                
+              </div>
+              <div class="post">
+                <a href="#">
+                  <span>07 de dezembro 2016</span>
+                <h4>CRUD com CodeIgniter[PARTE 1]</h4>
+                <p>Nesse post realizaremos as configurações necesárias juntamente com a estruturação para iniciarmos um CRUD utilizando o framework CodeIgniter.</p>
+                <div class="tags">
+                  <div class="tag">php</div>
+                  <div class="tag">codeigniter</div>
+                </div>
+                </a>
+              </div>
             </div>
             <div class="see-more">
-              <a href="#">Acesse meu blog.</a>
+              <a href="#">acesse meu blog.</a>
             </div>
           </div>
         </div>
       </article>
     </section>
 
-        <footer>
+        <footer id="contato">
         <div class="footer-contact">
           <div class="container">
             <div class="social-icons">
@@ -163,7 +229,7 @@
               </a>
             </div>
             <div class="copyright">
-              <span>desenvolvido com</span> <div class="heart-solid icon"></div> <span> Obrigado pela visita</span>
+              <span>desenvolvido com <strong>❤</strong> Obrigado pela visita</span>
             </div>
 
           </div>
@@ -172,5 +238,18 @@
 
 <!--SCRIPT PARA FUNCIONAR BOTÃO HAMBURGUER-->
 <script src="js/menu.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  var $doc = $('html, body');
+$('a').click(function() {
+    $doc.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+});
+</script>
 </body>
 </html>
