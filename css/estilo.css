@@ -57,11 +57,26 @@ small, .font_small {
   -webkit-filter: grayscale(1);
   filter: grayscale(1); }
 
-header {
+.menuFixo {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  -webkit-box-shadow: 0px 1px 24px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 1px 24px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 1px 24px 0px rgba(50, 50, 50, 0.75);
+  /* -webkit-box-shadow: 0px 6px 12px 0px rgba(50, 50, 50, 0.75); */
+  -moz-box-shadow: 0px 6px 12px 0px rgba(50, 50, 50, 0.75);
+  /* box-shadow: 44px 6px 12px 0px rgba(50, 50, 50, 0.75); */
+  background: #fff;
+  z-index: 999999999;
+  transition: all 0.4s ease; }
+
+.menuFixo .menu a {
+  color: #622c85; }
+
+a.active {
+  background: rgba(0, 0, 0, 0.1); }
 
 .content-main section {
   height: 100vh; }
@@ -315,8 +330,9 @@ header {
   -webkit-animation: bounce 1s infinite;
   animation: bounce 1s infinite; }
 
-footer {
-  background: #452362; }
+#contato {
+  background: #452362;
+  height: 400px; }
 
 .gitlab {
   border-radius: 50%;
@@ -480,7 +496,7 @@ footer {
     width: 80px;
     height: 80x;
     padding: 1.5em;
-    margin: 1em 0 0 0; }
+    margin: 2.5em 0 0 0; }
 
   .avatar {
     margin: 2em; }

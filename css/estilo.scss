@@ -71,11 +71,29 @@ small, .font_small {font-size: 0.75em;}
   filter: grayscale(1);
   }
 
-header{
+.menuFixo{
  position: fixed;
     top:0;
     left: 0;
     width: 100%;
+
+    -webkit-box-shadow: 0px 1px 24px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 1px 24px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 1px 24px 0px rgba(50, 50, 50, 0.75);
+    /* -webkit-box-shadow: 0px 6px 12px 0px rgba(50, 50, 50, 0.75); */
+    -moz-box-shadow:    0px 6px 12px 0px rgba(50, 50, 50, 0.75);
+    /* box-shadow: 44px 6px 12px 0px rgba(50, 50, 50, 0.75); */
+    background: #fff;
+    z-index: 999999999;
+ transition: all 0.4s ease;
+}
+
+.menuFixo .menu a {
+  color: #622c85;
+}
+
+a.active{
+ background: rgba(0, 0, 0, 0.1);
 }
 
 .content-main section{
@@ -371,8 +389,10 @@ transition: 0.3s ease-in;
   animation: bounce 1s infinite;
 }
 
-footer{
+#contato{
+
   background: #452362;
+  height: 400px;
 }
 
 .gitlab{
@@ -518,6 +538,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
 
   .menu ul{
@@ -589,7 +610,7 @@ footer{
         width: 80px;
     height: 80x;
     padding: 1.5em;
-    margin: 1em 0 0 0;
+    margin: 2.5em 0 0 0;
   }
 
 

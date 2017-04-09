@@ -34,8 +34,8 @@
 </head>
 <body>
   <div class="content-main">
-    <section>
-      <header>
+    <section id="inicio">
+      <header id="menu">
         <div class="container">
           <div class="menu">
             <button class="menu-abrir"></button>
@@ -46,7 +46,7 @@
             <nav class="barra-nav">
              <button class="menu-fechar"></button>
              <ul class="menu-principal">
-              <li><a href="#" class="active">Inicio</a></li>
+              <li><a href="#inicio" class="active">Inicio</a></li>
               <li><a href="#about">Sobre</a></li>
               <li><a href="files/Curriculum.pdf" target="_blank">CV</a></li>
               <li><a href="#projects">Projetos</a></li>
@@ -204,8 +204,8 @@
         </div>
       </article>
     </section>
-
-        <footer id="contato">
+    <section id="contato">
+      <footer  >
         <div class="footer-contact">
           <div class="container">
             <div class="social-icons">
@@ -236,19 +236,57 @@
         </div>
     </footer>
 
+    </section>
+        
 <!--SCRIPT PARA FUNCIONAR BOTÃO HAMBURGUER-->
 <script src="js/menu.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script type="text/javascript">
-  var $doc = $('html, body');
-$('a').click(function() {
-    $doc.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-    return false;
+
+<script>
+  (function () {
+    var menu = document.getElementById('menu');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 20) menu.classList.add('menuFixo');
+        else menu.classList.remove('menuFixo');
+    });
+})();
+</script>
+
+<script>
+ 
+var sections = $('section')
+  , nav = $('nav')
+  , nav_height = nav.outerHeight();
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+  
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+    
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+      
+      $(this).addClass('active');
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    }
+  });
+});
+
+nav.find('a').on('click', function () {
+  var $el = $(this)
+    , id = $el.attr('href');
+  
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - nav_height
+  }, 500);
+  
+  return false;
 });
 </script>
 </body>
