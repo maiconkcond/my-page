@@ -1,0 +1,33 @@
+/* MIXINS */
+
+
+//Logo
+@mixin mylogo {
+  font-weight: bold;
+  background-image: $gradient-logo;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Monoton', cursive;
+}
+
+//Borda Redonda (Avatar)
+@mixin borda-redonda {
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ border-radius: 50%;
+}
+
+//Sombras
+@mixin sombra($valor) {
+  -webkit-box-shadow: $valor;
+  -moz-box-shadow:  $valor;
+  box-shadow: $valor;
+}
+
+//Transições do site
+@mixin transicao($valor){
+  -webkit-transition: $valor;
+  -moz-transition: $valor;
+  -o-transition: $valor;
+  transition: $valor;
+}

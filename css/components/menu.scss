@@ -1,0 +1,70 @@
+/* MENU (HEADER E NAV) */
+
+.menuFixo{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  @include sombra(0px 1px 24px 0px rgba(50, 50, 50, 0.75));
+  @include transicao(all 0.4s ease);
+  background: $cor-branca;
+  z-index: 999999999;
+
+  .menu a {
+    color: $cor-roxo-medio;
+ }
+}
+
+a.active{
+  background: $cor-preta-opacidade;
+}
+
+.logo h1{
+  font-size: 2.5em;
+  margin: 0px;
+  @include mylogo;
+}
+
+
+.menu-abrir,
+.menu-fechar{
+  background: none;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  font-size: 1.6em;
+  text-indent: -999;
+}
+
+.menu-abrir{
+  height: 0;
+  width: 1em;
+  padding-top: .125em;
+  border-top: .355em double $cor-branca;
+  border-bottom: .125em solid $cor-branca;
+  vertical-align: middle;
+  margin: 0.5em;
+}
+
+.menu-fechar{
+  position: relative;
+  height: 1em;
+  width: 1em;
+
+  &:before{
+    content: '\00D7';
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+  }
+}
+
+
+.menu ul {
+  font-size: 1.1em;
+
+  li {
+    text-transform: lowercase;
+  }
+}
