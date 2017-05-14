@@ -16,3 +16,9 @@ $cor-roxo-claro: #8d6bbc;
 $cor-roxo-mais-claro: #8c4fad;
 $gradient-logo: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
 $sombra-avatar: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+
+
+//MEDIA QUERYS
+$mq-somente-desktop: "not all and (max-width: 600px)";
+$mq-smartphone: "(max-width: 600px)";
+$mq-desktop: "(min-width: 765px)";

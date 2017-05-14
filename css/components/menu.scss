@@ -1,5 +1,51 @@
 /* MENU (HEADER E NAV) */
 
+@media #{$mq-smartphone}{
+ nav{
+    height: 20%;
+  }
+}
+
+@media #{$mq-smartphone}{
+.menu{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .menu-principal li{
+    padding: 1em 0;
+    width: 100%;
+  }
+}
+
+@media #{$mq-desktop}{
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+
+      li a {
+        text-decoration: none;
+        color: $cor-branca;
+        flex-grow: 1;
+        padding: .6em 1em .6em 1em;
+
+        &:hover{
+          background: $cor-preta-opacidade;
+        }
+      }
+    }
+  }
+}
+
 .menuFixo{
   position: fixed;
   top:0;
@@ -12,7 +58,22 @@
 
   .menu a {
     color: $cor-roxo-medio;
- }
+  }
+}
+
+@media #{$mq-smartphone}{
+  .barra-nav{
+    background: #f0f0f0;
+    margin: 0;
+    height: 100%;
+    width: 90%;
+    max-width: 320px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -90%;
+    @include transicao(left 0.3s ease-out);
+  }
 }
 
 a.active{
@@ -34,6 +95,12 @@ a.active{
   -webkit-appearance: none;
   font-size: 1.6em;
   text-indent: -999;
+
+  //MEDIA QUERY APENAS QUANDO ESTIVER NO DESKTOP
+  //ACIMA DE 600PX 
+  @media #{$mq-somente-desktop} {
+        display: none;  
+  }
 }
 
 .menu-abrir{
@@ -67,4 +134,21 @@ a.active{
   li {
     text-transform: lowercase;
   }
+}
+
+@media #{$mq-smartphone}{
+.menu-ativo .barra-nav{
+    left: 0;
+  }
+.menu-ativo:after{
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
 }

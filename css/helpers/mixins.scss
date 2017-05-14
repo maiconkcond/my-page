@@ -10,13 +10,6 @@
   font-family: 'Monoton', cursive;
 }
 
-//Borda Redonda (Avatar)
-@mixin borda-redonda {
- -webkit-border-radius: 50%;
- -moz-border-radius: 50%;
- border-radius: 50%;
-}
-
 //Sombras
 @mixin sombra($valor) {
   -webkit-box-shadow: $valor;
@@ -30,4 +23,11 @@
   -moz-transition: $valor;
   -o-transition: $valor;
   transition: $valor;
+}
+
+//Borda Redonda (Avatar)
+%borda-redonda {
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ border-radius: 50%;
 }

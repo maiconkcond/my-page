@@ -24,6 +24,55 @@
 }
 
 
+@media #{$mq-smartphone}{
+
+  .call-to-action{
+    display: flex;
+    height: 80%;
+    align-items: center;
+    justify-content: center;;
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+  @media #{$mq-desktop}{
+    .call-to-action{
+      display: flex;
+      align-items: center;
+      height: 80%;
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+    }
+
+    h2 {
+      font-family: 'Archivo Black', sans-serif;
+      background: $cor-azul;
+      padding: .2em;
+      color: $cor-branca;
+      font-size: 2em;
+      text-transform: uppercase;
+    }
+
+    h3{
+      font-family: 'Tenor Sans', sans-serif;
+      margin-top: 0;
+      color: $cor-branca;
+    }
+  }
+}
+
+.bounce:before {
+  bottom: 0em;
+}
 
 .bounce {    
   position: absolute;

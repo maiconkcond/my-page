@@ -7,6 +7,10 @@ body {
   line-height: 1.45;
   color: $cor-preta;
   margin: 0;
+
+  @media #{$mq-desktop} {
+    font-size: 1em;  
+  }
 }
 
 p {margin-bottom: 1.3em;}
@@ -34,4 +38,26 @@ small, .font_small {font-size: 0.75em;}
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;    
+}
+
+
+@media #{$mq-desktop}{
+  .avatar{
+    margin: 2em;
+
+    img {
+      width: 250px;
+      height: 250px;
+      //@extend %borda-redonda;
+      @include sombra($sombra-avatar);
+    }
+  }
+
+  .about-text{
+    padding: 2em;
+
+    p {
+      text-indent: 2em;
+    }
+  }
 }
