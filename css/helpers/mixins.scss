@@ -1,5 +1,8 @@
 /* MIXINS */
 
+@import "compass/css3";
+@import "compass/utilities";
+
 
 //Logo
 @mixin mylogo {
@@ -10,13 +13,6 @@
   font-family: 'Monoton', cursive;
 }
 
-//Sombras
-@mixin sombra($valor) {
-  -webkit-box-shadow: $valor;
-  -moz-box-shadow:  $valor;
-  box-shadow: $valor;
-}
-
 //Transições do site
 @mixin transicao($valor){
   -webkit-transition: $valor;
@@ -25,9 +21,3 @@
   transition: $valor;
 }
 
-//Borda Redonda (Avatar)
-%borda-redonda {
- -webkit-border-radius: 50%;
- -moz-border-radius: 50%;
- border-radius: 50%;
-}

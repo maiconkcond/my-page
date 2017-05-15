@@ -42,17 +42,6 @@ small, .font_small {font-size: 0.75em;}
 
 
 @media #{$mq-desktop}{
-  .avatar{
-    margin: 2em;
-
-    img {
-      width: 250px;
-      height: 250px;
-      //@extend %borda-redonda;
-      @include sombra($sombra-avatar);
-    }
-  }
-
   .about-text{
     padding: 2em;
 
@@ -61,3 +50,10 @@ small, .font_small {font-size: 0.75em;}
     }
   }
 }
+
+
+.sprite-badge_page_about, .sprite-business-page-projects, .sprite-compose_page_blog{
+  width: 128px;
+  height: 128px;
+}
+

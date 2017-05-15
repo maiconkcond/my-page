@@ -51,7 +51,8 @@
   top:0;
   left: 0;
   width: 100%;
-  @include sombra(0px 1px 24px 0px rgba(50, 50, 50, 0.75));
+  @include box-shadow(rgba(50, 50, 50, 0.75) 2px 2px 10px);
+  //@include sombra(0px 1px 24px 0px rgba(50, 50, 50, 0.75));
   @include transicao(all 0.4s ease);
   background: $cor-branca;
   z-index: 999999999;
