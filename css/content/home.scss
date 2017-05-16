@@ -49,6 +49,8 @@
 }
 
 
+
+
     .call-to-action{
       display: flex;
       align-items: center;
@@ -68,6 +70,10 @@
       font-size: 2em;
       text-transform: uppercase;
       margin-bottom: 0;
+
+      @media #{$mq-smartphone-small}{
+        font-size: 1.5em;
+      }
     }
 
     h3{

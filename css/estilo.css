@@ -705,6 +705,11 @@ a.active {
   text-transform: uppercase;
   margin-bottom: 0;
 }
+@media (min-width: 320px) {
+  .call-to-action h2 {
+    font-size: 1.5em;
+  }
+}
 .call-to-action h3 {
   font-family: 'Tenor Sans', sans-serif;
   margin-top: 0;
