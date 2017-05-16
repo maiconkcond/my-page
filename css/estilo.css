@@ -429,6 +429,7 @@ body {
   line-height: 1.45;
   color: #000;
   margin: 0;
+  max-width: 100%;
 }
 @media (min-width: 765px) {
   body {
@@ -487,12 +488,12 @@ small, .font_small {
 }
 
 /* MENU (HEADER E NAV) */
-@media (max-width: 600px) {
+@media (max-width: 375px) {
   nav {
     height: 20%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 375px) {
   .menu {
     display: flex;
     justify-content: space-between;
@@ -546,7 +547,7 @@ small, .font_small {
   color: #622c85;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 375px) {
   .barra-nav {
     background: #f0f0f0;
     margin: 0;
@@ -586,7 +587,7 @@ a.active {
   font-size: 1.6em;
   text-indent: -999;
 }
-@media not all and (max-width: 600px) {
+@media not all and (max-width: 768px) {
   .menu-abrir,
   .menu-fechar {
     display: none;
@@ -595,12 +596,12 @@ a.active {
 
 .menu-abrir {
   height: 0;
-  width: 1em;
-  padding-top: .125em;
-  border-top: 0.355em double #fff;
-  border-bottom: 0.125em solid #fff;
+  width: 1.4em;
+  padding-top: 0.125em;
+  border-top: 0.6em double #622c85;
+  border-bottom: 0.2em solid #622c85;
   vertical-align: middle;
-  margin: 0.5em;
+  margin: 0.6em;
 }
 
 .menu-fechar {
@@ -623,7 +624,7 @@ a.active {
   text-transform: lowercase;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 375px) {
   .menu-ativo .barra-nav {
     left: 0;
   }
@@ -660,12 +661,18 @@ a.active {
   z-index: -1;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
+  background-position-x: -176px;
+}
+@media (min-width: 765px) {
+  .content-main:before {
+    background-position-x: 0px;
+  }
 }
 .content-main section {
   height: 100vh;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 375px) {
   .call-to-action {
     display: flex;
     height: 80%;
@@ -678,32 +685,42 @@ a.active {
     justify-content: center;
     align-items: center;
   }
+}
+.call-to-action {
+  display: flex;
+  align-items: center;
+  height: 40%;
+}
+.call-to-action .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.call-to-action h2 {
+  font-family: 'Archivo Black', sans-serif;
+  background: #7028e4;
+  padding: .2em;
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.call-to-action h3 {
+  font-family: 'Tenor Sans', sans-serif;
+  margin-top: 0;
+  color: #fff;
+  text-align: right;
+  margin-right: .8em;
 }
 @media (min-width: 765px) {
   .call-to-action {
-    display: flex;
-    align-items: center;
     height: 80%;
   }
-  .call-to-action .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .call-to-action h2 {
-    font-family: 'Archivo Black', sans-serif;
-    background: #7028e4;
-    padding: .2em;
-    color: #fff;
-    font-size: 2em;
-    text-transform: uppercase;
-  }
-  .call-to-action h3 {
-    font-family: 'Tenor Sans', sans-serif;
-    margin-top: 0;
-    color: #fff;
+    margin-bottom: .5em;
   }
 }
+
 .bounce:before {
   bottom: 0em;
 }
@@ -798,12 +815,21 @@ a.active {
   transform: rotate(180deg);
 }
 
+.list-project {
+  display: flex;
+  flex-direction: column;
+}
+.list-project .project a img {
+  max-width: 100%;
+}
+
 @media (min-width: 765px) {
   .list-project {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 4em;
+    flex-direction: row;
   }
 }
 @media (min-width: 765px) {
@@ -883,6 +909,22 @@ a.active {
     align-items: center;
     padding-bottom: 2em;
   }
+
+  .post a {
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    padding: 2em 0 2em 0;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  .post a:hover {
+    background: rgba(105, 105, 105, 0.17);
+    border-left: solid #622c85;
+    padding-left: .5em;
+  }
 }
 .title-post {
   color: #622c85;
@@ -896,21 +938,6 @@ a.active {
   align-items: flex-start;
   margin: 1em 0 1em 0;
   width: 100%;
-}
-.post a {
-  text-decoration: none;
-  color: #000;
-  width: 100%;
-  padding: 2em 0 2em 0;
-  -webkit-transition: 0.3s ease-in;
-  -moz-transition: 0.3s ease-in;
-  -o-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
-.post a:hover {
-  background: rgba(105, 105, 105, 0.17);
-  border-left: solid #622c85;
-  padding-left: .5em;
 }
 .post span {
   font-size: .8em;

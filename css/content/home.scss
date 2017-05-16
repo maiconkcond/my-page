@@ -16,7 +16,14 @@
     z-index: -1;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
+    background-position-x: -176px;
+
+    @media #{$mq-desktop}{
+      background-position-x: 0px;
+    }
   }
+
+
 
   section{
     height: 100vh;
@@ -41,13 +48,13 @@
   }
 }
 
-  @media #{$mq-desktop}{
+
     .call-to-action{
       display: flex;
       align-items: center;
-      height: 80%;
+      height: 40%;
 
-    .container{
+       .container{
       display: flex;
       flex-direction: column;
       align-items:center;
@@ -60,15 +67,28 @@
       color: $cor-branca;
       font-size: 2em;
       text-transform: uppercase;
+      margin-bottom: 0;
     }
 
     h3{
       font-family: 'Tenor Sans', sans-serif;
       margin-top: 0;
       color: $cor-branca;
+      text-align: right;
+      margin-right: .8em;
     }
+
+      @media #{$mq-desktop}{
+        height: 80%;
+
+        h2{
+          margin-bottom: .5em;
+        }
+      }
+
+   
   }
-}
+
 
 .bounce:before {
   bottom: 0em;

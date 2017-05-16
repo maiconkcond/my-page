@@ -105,13 +105,15 @@ a.active{
 }
 
 .menu-abrir{
+
   height: 0;
-  width: 1em;
-  padding-top: .125em;
-  border-top: .355em double $cor-branca;
-  border-bottom: .125em solid $cor-branca;
+  width: 1.4em;
+  padding-top: 0.125em;
+  border-top: 0.600em double $cor-roxo-medio;
+  border-bottom: 0.200em solid $cor-roxo-medio;
   vertical-align: middle;
-  margin: 0.5em;
+  margin: 0.6em;
+
 }
 
 .menu-fechar{

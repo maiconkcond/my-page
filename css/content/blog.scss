@@ -20,7 +20,23 @@
 
 
   }
+
+   .post a {
+    text-decoration: none;
+    color: $cor-preta;
+    width: 100%;
+    padding: 2em 0 2em 0;
+    @include transicao(0.3s ease-in);
+
+    &:hover{
+      background: $cor-cinza-opacidade;
+      border-left: solid $cor-roxo-medio;
+      padding-left: .5em;
+    }
+  }
 }
+
+
 
 .title-post{
   color: $cor-roxo-medio;
@@ -35,19 +51,7 @@
   margin: 1em 0 1em 0;
   width: 100%;
 
-  a {
-    text-decoration: none;
-    color: $cor-preta;
-    width: 100%;
-    padding: 2em 0 2em 0;
-    @include transicao(0.3s ease-in);
-
-    &:hover{
-      background: $cor-cinza-opacidade;
-      border-left: solid $cor-roxo-medio;
-      padding-left: .5em;
-    }
-  }
+ 
 
   span{
     font-size: .8em;

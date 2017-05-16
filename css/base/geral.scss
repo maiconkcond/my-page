@@ -7,6 +7,7 @@ body {
   line-height: 1.45;
   color: $cor-preta;
   margin: 0;
+  max-width: 100%;
 
   @media #{$mq-desktop} {
     font-size: 1em;  
@@ -50,7 +51,6 @@ small, .font_small {font-size: 0.75em;}
     }
   }
 }
-
 
 .sprite-badge_page_about, .sprite-business-page-projects, .sprite-compose_page_blog{
   width: 128px;
