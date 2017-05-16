@@ -488,6 +488,22 @@ small, .font_small {
 }
 
 /* MENU (HEADER E NAV) */
+.menu ul {
+  font-size: 1.1em;
+  text-align: center;
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 3em;
+}
+.menu ul li {
+  text-transform: uppercase;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+}
+
 @media (max-width: 480px) {
   nav {
     height: 20%;
@@ -517,12 +533,17 @@ small, .font_small {
     display: flex;
     list-style-type: none;
     justify-content: space-around;
+    margin-top: 1em;
+  }
+  .menu ul li {
+    text-transform: lowercase;
   }
   .menu ul li a {
     text-decoration: none;
     color: #fff;
     flex-grow: 1;
     padding: .6em 1em .6em 1em;
+    font-size: 1em;
   }
   .menu ul li a:hover {
     background: rgba(0, 0, 0, 0.1);
@@ -549,7 +570,7 @@ small, .font_small {
 
 @media (max-width: 480px) {
   .barra-nav {
-    background: #f0f0f0;
+    background: #622c85;
     margin: 0;
     height: 100%;
     width: 90%;
@@ -608,6 +629,8 @@ a.active {
   position: relative;
   height: 1em;
   width: 1em;
+  float: right;
+  right: .6em;
 }
 .menu-fechar:before {
   content: '\00D7';
@@ -615,13 +638,9 @@ a.active {
   top: 0;
   left: 0;
   text-indent: 0;
-}
-
-.menu ul {
-  font-size: 1.1em;
-}
-.menu ul li {
-  text-transform: lowercase;
+  float: left;
+  font-size: 1.5em;
+  color: #fff;
 }
 
 @media (max-width: 480px) {
