@@ -488,12 +488,12 @@ small, .font_small {
 }
 
 /* MENU (HEADER E NAV) */
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   nav {
     height: 20%;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .menu {
     display: flex;
     justify-content: space-between;
@@ -547,7 +547,7 @@ small, .font_small {
   color: #622c85;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .barra-nav {
     background: #f0f0f0;
     margin: 0;
@@ -624,7 +624,7 @@ a.active {
   text-transform: lowercase;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .menu-ativo .barra-nav {
     left: 0;
   }
@@ -672,7 +672,7 @@ a.active {
   height: 100vh;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .call-to-action {
     display: flex;
     height: 80%;
