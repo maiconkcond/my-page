@@ -42,6 +42,16 @@ small, .font_small {font-size: 0.75em;}
 }
 
 
+  .header-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+
+
+  }
+
+
 @media #{$mq-desktop}{
   .about-text{
     padding: 2em;
@@ -50,10 +60,7 @@ small, .font_small {font-size: 0.75em;}
       text-indent: 2em;
     }
   }
+
 }
 
-.sprite-badge_page_about, .sprite-business-page-projects, .sprite-compose_page_blog{
-  width: 128px;
-  height: 128px;
-}
 
