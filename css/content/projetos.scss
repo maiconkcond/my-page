@@ -3,42 +3,135 @@
 .projects{
   background: $cor-roxo-claro;
   position: relative;
-  padding: 3em 0 7em 0;
   margin-bottom: 3em;
+  padding-top: 1.5em;
 
-  &:before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    height: 0;
-    width: 0;
-    border-color: transparent transparent $cor-roxo-claro;
-    border-style: solid;
-    border-width: 0 0 6vw 98.7vw;
+
+
+  @media #{$mq-desktop}{
+    padding: 3em 0 7em 0;
+
+    &:before{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 100%;
+      height: 0;
+      width: 0;
+      border-color: transparent transparent $cor-roxo-claro;
+      border-style: solid;
+      border-width: 0 0 6vw 98.7vw;
+    }
+
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 100%;
+      height: 0;
+      width: 0;
+      border-color: transparent transparent $cor-roxo-claro;
+      border-style: solid;
+      border-width: 0 0 6vw 98.7vw;
+      transform: rotate(180deg);
+    }
   }
   
-  &:after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 100%;
-    height: 0;
-    width: 0;
-    border-color: transparent transparent $cor-roxo-claro;
-    border-style: solid;
-    border-width: 0 0 6vw 98.7vw;
-    transform: rotate(180deg);
+}
+
+.sprite-business-page-projects-mobile{
+  display: block;
+  width:50px;
+  height:50px;
+
+  @media #{$mq-desktop}{
+    display: none;
   }
+}
+
+.sprite-business-page-projects{
+  display: none;
+
+  @media #{$mq-desktop}{
+   width: 128px;
+   height: 128px;
+   display: block;
+ }
 }
 
 
 .list-project {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  .project a img{
-    max-width: 100%;
+
+  .project{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    padding: 1em;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img{
+        max-width: 100%;
+        border: 1px solid #ddd;
+
+    border-radius: 4px;
+    padding: 5px;
+      }
+    }
+
+  }
+
+  @media #{$mq-desktop}{
+    .project{
+      position: relative;
+      display: flex;
+      margin: .5em;
+
+      a {
+        @include transicao(0.5s ease-in);
+        width: 250px;
+        height: 250px;
+
+        &:hover{
+         filter: brightness(20%)
+       }
+
+       h3{
+        margin: 0;
+        padding: .5em;
+        font-size: 1em;
+        text-transform: uppercase;
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+    }
+  }
+}
+}
+
+.tag-project{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: #fff;
+
+  a{
+    color: #fff;
+    padding-left: .4em;
+    padding-right: .4em;
+    text-decoration: none;
   }
 }
 
@@ -55,56 +148,49 @@
 }
 
 
-@media #{$mq-desktop}{
-  .project{
-    position: relative;
-    display: flex;
-    margin: .5em;
 
-    a {
-      @include transicao(0.5s ease-in);
-      width: 250px;
-      height: 250px;
 
-      &:hover{
-       filter: brightness(20%)
-      }
 
-      h3{
-        margin: 0;
-        padding: .5em;
-        font-size: 1em;
-        text-transform: uppercase;
-      }
-  
-      img{
-        width: 100%;
-        height: 100%;
-        position: relative;
-      }
+
+.title-project{
+  position: absolute;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1000;
+  height: 3%;
+  color: #fff;
+  font-weight: bold;
+  @media #{$mq-desktop}{
+    .title-project {
+      /* float: left; */
+      position: absolute;
+      left: 0px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      bottom: 0;
+      z-index: 1000;
+      height: 80px;
+      background-color: $cor-preta-opacidade-escura;
+      /* padding: 5px; */
+      color: $cor-branca;
+      /* font-weight: bold; */
     }
   }
 }
 
-@media #{$mq-desktop}{
-  .title-project {
-    /* float: left; */
-    position: absolute;
-    left: 0px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-    bottom: 0;
-    z-index: 1000;
-    height: 80px;
-    background-color: $cor-preta-opacidade-escura;
-    /* padding: 5px; */
-    color: $cor-branca;
-    /* font-weight: bold; */
-  }
-}
+
 
 
 .see-more{
