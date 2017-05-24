@@ -440,6 +440,9 @@ small, .font_small {
     padding: 2em; }
     .about-text p {
       text-indent: 2em; } }
+.see-more a {
+  color: #622c85; }
+
 /* MENU (HEADER E NAV) */
 .menu ul {
   font-size: 1.1em;
@@ -1082,10 +1085,6 @@ a.active {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; } }
@@ -1133,14 +1132,19 @@ a.active {
   .post h4 {
     font-weight: 500;
     margin: 0;
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    color: #622c85; }
     @media (min-width: 765px) {
       .post h4 {
         font-size: 1.333em; } }
   .post p {
     margin: 0;
     font-weight: 300;
-    color: gray; }
+    color: gray;
+    font-size: .9em; }
+    @media (min-width: 765px) {
+      .post p {
+        font-size: 1em; } }
 
 .tags {
   display: -webkit-box;
@@ -1158,9 +1162,6 @@ a.active {
   margin: 0.1em .5em .1em 0; }
 
 /* SEÇÃO FOOTER*/
-#contato {
-  height: 0px; }
-
 .sprite-badge_page_about-mobile {
   background-position: 0 0; }
 
@@ -1203,7 +1204,10 @@ a.active {
 
 #contato {
   background: #452362;
-  height: 400px; }
+  height: 200px; }
+  @media (min-width: 765px) {
+    #contato {
+      height: 300px; } }
 
 .social-icons {
   display: -webkit-box;

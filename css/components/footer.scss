@@ -1,9 +1,5 @@
 /* SEÇÃO FOOTER*/
 
-#contato{
-  height: 0px;
-}
-
 
 @include all-sprite-sprites;
 
@@ -14,7 +10,10 @@
 
 #contato{
   background: $cor-roxo-escuro;
-  height: 400px;
+  height: 200px;
+  @media #{$mq-desktop}{
+    height: 300px;
+  }
 }
 
 .social-icons{

@@ -44,7 +44,6 @@
     padding: 1.5em;
     @media #{$mq-desktop}{
       display: flex;
-    flex-direction: row;
     justify-content: flex-start;
 
     }
@@ -102,6 +101,7 @@
     font-weight: 500;
     margin: 0;
     font-size: 1.1em;
+    color: $cor-roxo-medio;
     @media #{$mq-desktop}{
 
     font-size: 1.333em;
@@ -112,6 +112,10 @@
     margin: 0;
     font-weight: 300;
     color: $cor-cinza;
+    font-size: .9em;
+    @media #{$mq-desktop}{
+      font-size: 1em;
+    }
   }
 }
 
