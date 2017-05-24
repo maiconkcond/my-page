@@ -1,5 +1,10 @@
 /* SEÇÃO FOOTER*/
 
+#contato{
+  height: 0px;
+}
+
+
 @include all-sprite-sprites;
 
 .sprite-contact_icon_email, .sprite-contact_icon_github, .sprite-contact_icon_gitlab, .sprite-contact_icon_linkedin, .sprite-contact_icon_twitter, .sprite-contact_icon_facebook {
@@ -16,8 +21,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 6em;
+  
+      padding-top: 1em;
+      @media #{$mq-desktop}{
+        padding-top: 6em;
   padding-bottom: 2em;
+      }
 
 
   a {

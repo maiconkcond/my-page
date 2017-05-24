@@ -1,6 +1,6 @@
 @charset "UTF-8";
-.sprite-sprite, .sprite-badge_page_about-mobile, .sprite-badge_page_about, .sprite-business-page-projects-mobile, .sprite-business-page-projects, .sprite-compose_page_blog, .sprite-contact_icon_email, .sprite-contact_icon_facebook, .sprite-contact_icon_github, .sprite-contact_icon_gitlab, .sprite-contact_icon_linkedin, .sprite-contact_icon_twitter {
-  background-image: url('../img/sprite-sc79a670ace.png');
+.sprite-sprite, .sprite-badge_page_about-mobile, .sprite-badge_page_about, .sprite-business-page-projects-mobile, .sprite-business-page-projects, .sprite-compose_page_blog-mobile, .sprite-compose_page_blog, .sprite-contact_icon_email, .sprite-contact_icon_facebook, .sprite-contact_icon_github, .sprite-contact_icon_gitlab, .sprite-contact_icon_linkedin, .sprite-contact_icon_twitter {
+  background-image: url('../img/sprite-sa3688deca4.png');
   background-repeat: no-repeat; }
 
 /*VARIAVEIS*/
@@ -735,26 +735,29 @@ a.active {
 .sprite-business-page-projects {
   background-position: 0 -234px; }
 
-.sprite-compose_page_blog {
+.sprite-compose_page_blog-mobile {
   background-position: 0 -364px; }
 
-.sprite-contact_icon_email {
-  background-position: 0 -494px; }
+.sprite-compose_page_blog {
+  background-position: 0 -416px; }
 
-.sprite-contact_icon_facebook {
+.sprite-contact_icon_email {
   background-position: 0 -546px; }
 
-.sprite-contact_icon_github {
+.sprite-contact_icon_facebook {
   background-position: 0 -598px; }
 
-.sprite-contact_icon_gitlab {
+.sprite-contact_icon_github {
   background-position: 0 -650px; }
 
-.sprite-contact_icon_linkedin {
+.sprite-contact_icon_gitlab {
   background-position: 0 -702px; }
 
-.sprite-contact_icon_twitter {
+.sprite-contact_icon_linkedin {
   background-position: 0 -754px; }
+
+.sprite-contact_icon_twitter {
+  background-position: 0 -806px; }
 
 .sprite-badge_page_about {
   display: none; }
@@ -903,8 +906,9 @@ a.active {
         padding: 5px; }
   .list-project .project h3 {
     text-transform: lowercase;
-    font-size: 1.5em;
-    background: #622c85; }
+    font-size: 1.3em;
+    background: #622c85;
+    padding: .1em 1em; }
   @media (min-width: 765px) {
     .list-project .project {
       position: relative;
@@ -1005,22 +1009,35 @@ a.active {
       color: #fff;
       /* font-weight: bold; */ } }
 
+.categoria-selecionada {
+  color: #622c85 !important;
+  font-weight: bold; }
+
 .see-more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 765px) {
+    .see-more {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
   .see-more a {
-    text-align: right;
     font-weight: 600;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.1em; }
 
 /* SEÇÃO BLOG */
 .blog {
-  margin-top: 6em;
+  margin-top: 1.5em;
   margin-bottom: 3em; }
+  @media (min-width: 765px) {
+    .blog {
+      margin-top: 6em; } }
 
 @media (min-width: 765px) {
   .container-article {
@@ -1045,10 +1062,55 @@ a.active {
       background: rgba(105, 105, 105, 0.17);
       border-left: solid #622c85;
       padding-left: .5em; } }
+.list-posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5em; }
+  @media (min-width: 765px) {
+    .list-posts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+
+.sprite-compose_page_blog-mobile {
+  display: block;
+  width: 50px;
+  height: 50px; }
+  @media (min-width: 765px) {
+    .sprite-compose_page_blog-mobile {
+      display: none; } }
+
+.sprite-compose_page_blog {
+  display: none; }
+  @media (min-width: 765px) {
+    .sprite-compose_page_blog {
+      width: 128px;
+      height: 128px;
+      display: block; } }
+
 .title-post {
   color: #622c85;
-  font-size: 1.5em;
-  font-weight: 600; }
+  font-weight: 600;
+  margin: 0;
+  text-align: center; }
 
 .post {
   display: -webkit-box;
@@ -1063,12 +1125,18 @@ a.active {
           align-items: flex-start;
   margin: 1em 0 1em 0;
   width: 100%; }
+  .post a {
+    text-decoration: none; }
   .post span {
     font-size: .8em;
     color: gray; }
   .post h4 {
     font-weight: 500;
-    margin: 0; }
+    margin: 0;
+    font-size: 1.1em; }
+    @media (min-width: 765px) {
+      .post h4 {
+        font-size: 1.333em; } }
   .post p {
     margin: 0;
     font-weight: 300;
@@ -1090,6 +1158,9 @@ a.active {
   margin: 0.1em .5em .1em 0; }
 
 /* SEÇÃO FOOTER*/
+#contato {
+  height: 0px; }
+
 .sprite-badge_page_about-mobile {
   background-position: 0 0; }
 
@@ -1102,26 +1173,29 @@ a.active {
 .sprite-business-page-projects {
   background-position: 0 -234px; }
 
-.sprite-compose_page_blog {
+.sprite-compose_page_blog-mobile {
   background-position: 0 -364px; }
 
-.sprite-contact_icon_email {
-  background-position: 0 -494px; }
+.sprite-compose_page_blog {
+  background-position: 0 -416px; }
 
-.sprite-contact_icon_facebook {
+.sprite-contact_icon_email {
   background-position: 0 -546px; }
 
-.sprite-contact_icon_github {
+.sprite-contact_icon_facebook {
   background-position: 0 -598px; }
 
-.sprite-contact_icon_gitlab {
+.sprite-contact_icon_github {
   background-position: 0 -650px; }
 
-.sprite-contact_icon_linkedin {
+.sprite-contact_icon_gitlab {
   background-position: 0 -702px; }
 
-.sprite-contact_icon_twitter {
+.sprite-contact_icon_linkedin {
   background-position: 0 -754px; }
+
+.sprite-contact_icon_twitter {
+  background-position: 0 -806px; }
 
 .sprite-contact_icon_email, .sprite-contact_icon_github, .sprite-contact_icon_gitlab, .sprite-contact_icon_linkedin, .sprite-contact_icon_twitter, .sprite-contact_icon_facebook {
   width: 50px;
@@ -1141,8 +1215,11 @@ a.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 6em;
-  padding-bottom: 2em; }
+  padding-top: 1em; }
+  @media (min-width: 765px) {
+    .social-icons {
+      padding-top: 6em;
+      padding-bottom: 2em; } }
   .social-icons a {
     padding-left: .3em;
     padding-right: .3em; }
