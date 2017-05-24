@@ -10,7 +10,7 @@
 
 #contato{
   background: $cor-roxo-escuro;
-  height: 200px;
+  height: 128px;
   @media #{$mq-desktop}{
     height: 300px;
   }
@@ -44,12 +44,13 @@
   padding: 1em;
   font-weight: 500;
 
+  span{
+    font-size: .9em;
+  }
+
   strong {
     font-weight: bold;
-    font-size: 1.2em;
-    @media #{$mq-desktop}{
-      font-size: 1.5em;
-    }
+    font-size: 1.5em;
   }
 }
 

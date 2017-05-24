@@ -1204,7 +1204,7 @@ a.active {
 
 #contato {
   background: #452362;
-  height: 200px; }
+  height: 128px; }
   @media (min-width: 765px) {
     #contato {
       height: 300px; } }
@@ -1238,12 +1238,11 @@ a.active {
           justify-content: center;
   padding: 1em;
   font-weight: 500; }
+  .copyright span {
+    font-size: .9em; }
   .copyright strong {
     font-weight: bold;
-    font-size: 1.2em; }
-    @media (min-width: 765px) {
-      .copyright strong {
-        font-size: 1.5em; } }
+    font-size: 1.5em; }
 
 .heart-solid.icon {
   color: #000;
