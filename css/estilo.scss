@@ -8,11 +8,11 @@ $sprite-spacing: 2px;
 @import 'base/normalize';
 @import 'base/geral';
 
-@import 'components/menu';
+@import 'components/menu';  
 
-@import 'content/home';
+@import 'content/home'; 
 @import 'content/sobre';
 @import 'content/projetos';
-@import 'content/blog';
+@import 'content/blog'; 
 
 @import 'components/footer';
